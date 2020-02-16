@@ -1,0 +1,12 @@
+<div align="center" ng-app="">
+    <h1>Cash Tracking</h1>
+    <h1>Total: {{ total }}</h1>
+    <input type="number" #miInput>
+
+    <button (click)="ingreso(miInput)">Boton 1</button>
+    <button (click)="egreso(miInput)">Boton 2</button>
+</div>
+<h3>Lista</h3>
+<ul>
+    <li *ngFor="let resultado of resultados">{{ resultado }}</li>
+</ul>
