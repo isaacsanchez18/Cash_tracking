@@ -1,12 +1,14 @@
 <div align="center" ng-app="">
     <h1>Cash Tracking</h1>
-    <h1>Total: {{ total }}</h1>
+    <h1>Total: ${{ total }}</h1>
     <input type="number" #miInput>
 
-    <button (click)="ingreso(miInput)">Boton 1</button>
-    <button (click)="egreso(miInput)">Boton 2</button>
+    <a class="waves-effect waves-light btn-large btn-green" (click)="ingreso(miInput)">Income</a>
+    <a class="waves-effect waves-light btn-large btn-red" (click)="egreso(miInput)">Expense</a>
 </div>
-<h3>Lista</h3>
+<h3>Transactions</h3>
 <ul>
-    <li *ngFor="let resultado of resultados">{{ resultado }}</li>
+    <li *ngFor="let resultado of resultados">${{ resultado }}</li>
 </ul>
+
+<!--onkeypress="return event.charCode >= 48"-->

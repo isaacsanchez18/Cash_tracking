@@ -20,10 +20,10 @@ export class HomeComponent implements OnInit {
 
   ingreso(elemento: HTMLInputElement) {
 
-    if(elemento.value === null) {
-      alert('No hay ningn valor.');
+    if(elemento.value === '' || elemento.value < '0') {
+      alert('Incorrect value');
     }
-    else {
+    else if(elemento.value > '0') {
       this.entra = elemento.value;
       const numero1 = Number(this.entra);
       this.total += numero1;
@@ -33,10 +33,11 @@ export class HomeComponent implements OnInit {
 
   egreso(elemento: HTMLInputElement) {
 
-    if(elemento.value === null) {
-      alert('No hay ningn valor.');
+    if(elemento.value === '' || elemento.value < '0') {
+      alert('Incorrect value');
     }
-    else {
+
+    else if (elemento.value > '0') {
       this.sale = elemento.value;
       const numero2 = Number(this.sale);
       this.total -= numero2;
